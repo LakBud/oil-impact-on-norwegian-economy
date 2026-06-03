@@ -1,5 +1,10 @@
 import streamlit as st
 from streamlit_autorefresh import st_autorefresh
+import sys
+import os
+
+root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
+sys.path.insert(0, root)
 
 from src.pipelines.processed import (
     returns_df,
