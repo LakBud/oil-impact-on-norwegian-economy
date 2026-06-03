@@ -4,9 +4,13 @@ from src.lib.dashboard.core import build_figure, add_traces, apply_legends
 from src.theme.dashboard_styling import style_annotations, style_axes, build_legend_layout
 from src.utils.dashboard_utils import compute_row_heights, detect_heatmaps
 from plotly.graph_objects import Figure
+from src.theme.dashboard_styling import PANEL_HEIGHTS
+
 
 
 def render_dashboard(layout: list[dict]) -> Figure:
+    total_height = sum(PANEL_HEIGHTS.get(item["type"], 600) for item in layout)
+    
     row_heights = compute_row_heights(layout)
     detect_heatmaps(layout, row_heights)  # Inject row_heights into heatmap meta before building
 
@@ -26,7 +30,7 @@ def render_dashboard(layout: list[dict]) -> Figure:
 
     fig.update_layout(
         hovermode="x unified",
-        height=600 * len(layout),  # Each panel gets a fixed 600px of height
+        height=total_height,  # Each panel gets a fixed 600px of height
         template="plotly_dark",
         margin=dict(l=80, r=220, t=80, b=60),
         paper_bgcolor=BG,

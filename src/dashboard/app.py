@@ -56,3 +56,4 @@ st.plotly_chart(fig, width="stretch")
 
 
 # uv run python -m streamlit run src/dashboard/app.py
+# python -m streamlit run src/dashboard/app.py

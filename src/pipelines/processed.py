@@ -106,3 +106,6 @@ corr_df.to_csv("data/stats/correlation_matrix.csv")
 
 
 print("processed.py is finished. Files saved in data/raw, data/processed/ and data/stats/")
+
+# uv run python -m src.pipelines.processed
+# python -m src.pipelines.processed

@@ -132,7 +132,7 @@ oil-impact-on-norwegian-economy/
 ```bash
 pip install -r requirements.txt
 python -m src.pipelines.processed
-streamlit run src/dashboard/app.py
+python -m streamlit run src/dashboard/app.py
 ```
 
 ---
@@ -181,13 +181,13 @@ uv run python -m src.pipelines.processed
 Med pip:
 
 ```bash
-streamlit run src/dashboard/app.py
+python -m streamlit run src/dashboard/app.py
 ```
 
 Eller med uv:
 
 ```bash
-uv run streamlit run src/dashboard/app.py
+uv run python -m streamlit run src/dashboard/app.py
 ```
 
 Dashboardet åpnes på:

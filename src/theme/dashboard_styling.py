@@ -1,6 +1,12 @@
 from src.theme.theme import ORANGE, GRID, ACCENT
 from plotly.graph_objects import Figure
 
+PANEL_HEIGHTS = {
+    "table": 200,
+    "xy": 600,
+}
+
+
 
 DASHBOARD_STYLE: str = """
     <style>
